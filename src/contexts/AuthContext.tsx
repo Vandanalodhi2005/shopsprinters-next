@@ -10,6 +10,7 @@ interface User {
   isAdmin?: boolean;
   token: string;
   cart?: any[];
+  createdAt: string;
 }
 
 interface AuthContextType {
@@ -45,7 +46,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     if (typeof window !== 'undefined') {
       const storedUser = localStorage.getItem('userInfo');
       if (storedUser) {
-        setUser(JSON.parse(storedUser));
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser?.data || parsedUser);
       }
     }
     setLoading(false);
@@ -59,13 +61,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'login', email, password, isAdminLogin }),
       });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.message || 'Login failed');
-      setUser(data);
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || 'Login failed');
+      const userData = result.data || result;
+      setUser(userData);
       if (typeof window !== 'undefined') {
-        localStorage.setItem('userInfo', JSON.stringify(data));
+        localStorage.setItem('userInfo', JSON.stringify(userData));
       }
-      return data;
+      return userData;
     } catch (error) {
       throw error;
     } finally {
@@ -81,13 +84,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'register', ...userData }),
       });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.message || 'Registration failed');
-      setUser(data);
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || 'Registration failed');
+      const registeredUser = result.data || result;
+      setUser(registeredUser);
       if (typeof window !== 'undefined') {
-        localStorage.setItem('userInfo', JSON.stringify(data));
+        localStorage.setItem('userInfo', JSON.stringify(registeredUser));
       }
-      return data;
+      return registeredUser;
     } catch (error) {
       throw error;
     } finally {
@@ -106,14 +110,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         },
         body: JSON.stringify(userData),
       });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.message || 'Update failed');
-      const updatedUser = { ...user!, ...data };
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || 'Update failed');
+      const updatedProfile = result.data || result;
+      const updatedUser = { ...user!, ...updatedProfile };
       setUser(updatedUser);
       if (typeof window !== 'undefined') {
         localStorage.setItem('userInfo', JSON.stringify(updatedUser));
       }
-      return data;
+      return updatedProfile;
     } catch (error) {
       throw error;
     } finally {
@@ -123,12 +128,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const getOrders = async () => {
     try {
-      const response = await fetch('/api/orders/myorders', {
+      const response = await fetch('/api/orders', {
         headers: { 'Authorization': `Bearer ${user?.token}` }
       });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.message || 'Failed to fetch orders');
-      return data;
+      if (!response.ok) throw new Error(data.message || data.error || 'Failed to fetch orders');
+      return data?.data?.orders || data?.orders || [];
     } catch (error) {
       throw error;
     }

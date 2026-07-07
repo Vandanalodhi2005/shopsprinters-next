@@ -32,8 +32,8 @@ export async function GET(req: NextRequest) {
 
     const total = await Order.countDocuments(query);
     const orders = await Order.find(query)
-      .populate('user', 'name email')
-      .populate('orderItems.product', 'title price')
+      .populate('user', 'name email firstName lastName')
+      .populate('orderItems.product', 'title price image')
       .limit(pageSize)
       .skip(pageSize * (page - 1))
       .sort({ createdAt: -1 });
@@ -64,9 +64,21 @@ export async function POST(req: NextRequest) {
     }
 
     const data = await req.json();
+    const shippingAddress = data?.shippingAddress || {};
+
+    const normalizedShippingAddress = {
+      fullName: shippingAddress.fullName || `${shippingAddress.firstName || ''} ${shippingAddress.lastName || ''}`.trim(),
+      address: shippingAddress.address || '',
+      city: shippingAddress.city || '',
+      state: shippingAddress.state || '',
+      postalCode: shippingAddress.postalCode || shippingAddress.zip || '',
+      country: shippingAddress.country || '',
+      phone: shippingAddress.phone || '',
+    };
 
     const order = await Order.create({
       ...data,
+      shippingAddress: normalizedShippingAddress,
       user: payload.id,
       status: 'pending',
     });

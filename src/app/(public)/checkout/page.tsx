@@ -33,14 +33,12 @@ const CheckoutPage = () => {
   const [shippingError, setShippingError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (user) {
-      setShippingData(prev => ({
-        ...prev,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email
-      }));
-    }
+    setShippingData(prev => ({
+      ...prev,
+      firstName: user?.firstName || '',
+      lastName: user?.lastName || '',
+      email: user?.email || '',
+    }));
   }, [user]);
 
   useEffect(() => {
@@ -118,7 +116,12 @@ const CheckoutPage = () => {
       }
 
       const data = await response.json();
-      const filteredRates = Array.isArray(data) ? data : [];
+      const rates = Array.isArray(data?.data?.rates)
+        ? data.data.rates
+        : Array.isArray(data?.rates)
+          ? data.rates
+          : [];
+      const filteredRates = rates.filter((rate: any) => rate && typeof rate.rate !== 'undefined');
       setShippingRates(filteredRates);
       
       if (filteredRates.length > 0) {
@@ -179,9 +182,15 @@ const CheckoutPage = () => {
 
       if (!response.ok) throw new Error('Payment failed');
 
-      const createdOrder = await response.json();
+      const createdOrderPayload = await response.json();
+      const createdOrder = createdOrderPayload?.data || createdOrderPayload;
+      const orderId = createdOrder?._id;
 
-      await fetch(`/api/orders/clover/pay`, {
+      if (!orderId) {
+        throw new Error('Order could not be created');
+      }
+
+      const paymentResponse = await fetch(`/api/orders/clover/pay`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -189,13 +198,17 @@ const CheckoutPage = () => {
         },
         body: JSON.stringify({
           amount: totalPrice,
-          orderId: createdOrder._id,
+          orderId,
           source: result.token
         }),
       });
 
+      if (!paymentResponse.ok) {
+        throw new Error('Payment processing failed');
+      }
+
       clearCart();
-      router.push('/order-details/' + createdOrder._id);
+      router.push('/order-details/' + orderId);
     } catch (error) {
       alert('Transaction failed.');
     } finally {
@@ -204,7 +217,8 @@ const CheckoutPage = () => {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setShippingData({ ...shippingData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setShippingData((prev) => ({ ...prev, [name]: value }));
   };
 
   if (!isAuthenticated) return null;

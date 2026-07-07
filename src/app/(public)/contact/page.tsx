@@ -5,6 +5,42 @@ import Link from 'next/link';
 
 const ContactPage = () => {
   const [agreed, setAgreed] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!agreed) return;
+
+    setSubmitting(true);
+    setFeedback(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || data.message || 'Unable to send message');
+
+      setFeedback({ type: 'success', message: 'Thanks! Your message has been sent successfully.' });
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setAgreed(false);
+    } catch (error: any) {
+      setFeedback({ type: 'error', message: error.message || 'Unable to send message' });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <main className="bg-white min-h-screen">
@@ -31,11 +67,18 @@ const ContactPage = () => {
             {/* Left Column: Form */}
             <div className="bg-[#fdf2f2] p-8 md:p-12 rounded-[40px] shadow-sm">
               <h2 className="text-2xl font-medium text-dark mb-8">Send Us Message</h2>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                {feedback && (
+                  <div className={`rounded-2xl border px-4 py-3 text-sm font-medium ${feedback.type === 'success' ? 'border-green-200 bg-green-50 text-green-700' : 'border-red-200 bg-red-50 text-red-700'}`}>
+                    {feedback.message}
+                  </div>
+                )}
                 <div>
                   <input 
                     type="text" 
                     placeholder="Name *" 
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full bg-[#eeebeb] border-none rounded-lg px-6 py-4 text-sm text-gray-700 font-medium focus:ring-1 focus:ring-[#ff2d46] outline-none"
                     required 
                   />
@@ -44,14 +87,37 @@ const ContactPage = () => {
                   <input 
                     type="email" 
                     placeholder="Email *" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full bg-[#eeebeb] border-none rounded-lg px-6 py-4 text-sm text-gray-700 font-medium focus:ring-1 focus:ring-[#ff2d46] outline-none"
                     required 
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="tel" 
+                    placeholder="Phone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full bg-[#eeebeb] border-none rounded-lg px-6 py-4 text-sm text-gray-700 font-medium focus:ring-1 focus:ring-[#ff2d46] outline-none"
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="Subject *"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    className="w-full bg-[#eeebeb] border-none rounded-lg px-6 py-4 text-sm text-gray-700 font-medium focus:ring-1 focus:ring-[#ff2d46] outline-none"
+                    required
                   />
                 </div>
                 <div>
                   <textarea 
                     placeholder="Comment *" 
                     rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full bg-[#eeebeb] border-none rounded-lg px-6 py-4 text-sm text-gray-700 font-medium focus:ring-1 focus:ring-[#ff2d46] outline-none resize-none"
                     required
                   ></textarea>
@@ -76,10 +142,11 @@ const ContactPage = () => {
                 </div>
 
                 <button 
-                  disabled={!agreed}
-                  className={`px-12 py-4 rounded-full uppercase text-sm tracking-widest transition-all transform flex items-center justify-center gap-2 font-medium ${agreed ? 'bg-dark text-white hover:bg-[#ff2d46] hover:-translate-y-1 shadow-lg shadow-black/10' : 'bg-gray-100 text-gray-300 cursor-not-allowed'}`}
+                  type="submit"
+                  disabled={!agreed || submitting}
+                  className={`px-12 py-4 rounded-full uppercase text-sm tracking-widest transition-all transform flex items-center justify-center gap-2 font-medium ${agreed && !submitting ? 'bg-dark text-white hover:bg-[#ff2d46] hover:-translate-y-1 shadow-lg shadow-black/10' : 'bg-gray-100 text-gray-300 cursor-not-allowed'}`}
                 >
-                  SEND
+                  {submitting ? 'Sending...' : 'SEND'}
                 </button>
               </form>
             </div>

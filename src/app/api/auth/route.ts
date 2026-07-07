@@ -238,6 +238,7 @@ async function handleRegister(data: any) {
       email: user.email,
       isAdmin: user.isAdmin,
       token,
+      createdAt: user.createdAt,
     },
     'User registered successfully'
   );
@@ -281,6 +282,7 @@ async function handleLogin(data: any) {
     isAdmin: user.isAdmin,
     token,
     cart: user.cart || [],
+    createdAt: user.createdAt,
   });
 }
 

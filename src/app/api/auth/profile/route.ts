@@ -33,6 +33,7 @@ export async function GET(req: NextRequest) {
       isAdmin: user.isAdmin,
       avatar: user.avatar,
       cart: user.cart || [],
+      createdAt: user.createdAt,
     });
   } catch (error: any) {
     return errorResponse(error.message || 'Failed to fetch profile', 500);
@@ -114,6 +115,7 @@ export async function PUT(req: NextRequest) {
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
       token: newToken,
+      createdAt: updatedUser.createdAt,
     });
   } catch (error: any) {
     return errorResponse(error.message || 'Failed to update profile', 500);

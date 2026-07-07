@@ -24,10 +24,28 @@ const ShopPage = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
+      const url = '/api/products?limit=all';
+      const attemptFetch = async () => {
+        const response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) {
+          const text = await response.text();
+          throw new Error(`Products API error ${response.status}: ${text}`);
+        }
+        return response;
+      };
+
       try {
-        const response = await fetch('/api/products?limit=1000');
+        let response = await attemptFetch();
         const data = await response.json();
-        const productList = Array.isArray(data) ? data : (data.products || []);
+        const productList = Array.isArray(data)
+          ? data
+          : Array.isArray(data.products)
+            ? data.products
+            : Array.isArray(data.data?.products)
+              ? data.data.products
+              : Array.isArray(data.data)
+                ? data.data
+                : [];
 
         // Sort products: Printers first, then Ink/Toners
         const sortedProducts = [...productList].sort((a: any, b: any) => {
@@ -35,14 +53,16 @@ const ShopPage = () => {
             if (typeof product.category === 'object' && product.category?.name) {
               return product.category.name.toLowerCase();
             }
-            return (product.category || '').toLowerCase();
+            return (typeof product.category === 'string' ? product.category : '').toLowerCase();
           };
 
           const aCategory = getCategoryName(a);
           const bCategory = getCategoryName(b);
 
-          const aIsPrinter = aCategory.includes('printer');
-          const bIsPrinter = bCategory.includes('printer');
+          // Printers: categories like "laser", "inkjet", or anything with "printer"
+          const aIsPrinter = aCategory.includes('laser') || aCategory.includes('inkjet') || aCategory.includes('printer');
+          const bIsPrinter = bCategory.includes('laser') || bCategory.includes('inkjet') || bCategory.includes('printer');
+          // Ink & Toner
           const aIsInkOrToner = aCategory.includes('ink') || aCategory.includes('toner');
           const bIsInkOrToner = bCategory.includes('ink') || bCategory.includes('toner');
 
@@ -60,7 +80,48 @@ const ShopPage = () => {
         setProducts(sortedProducts);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching products:', error);
+        console.warn('Products API fetch failed, retrying once...', error);
+        try {
+          await new Promise((resolve) => setTimeout(resolve, 500));
+          const response = await attemptFetch();
+          const data = await response.json();
+          const productList = Array.isArray(data)
+            ? data
+            : Array.isArray(data.products)
+              ? data.products
+              : Array.isArray(data.data?.products)
+                ? data.data.products
+                : Array.isArray(data.data)
+                  ? data.data
+                  : [];
+
+          const sortedProducts = [...productList].sort((a: any, b: any) => {
+            const getCategoryName = (product: any) => {
+              if (typeof product.category === 'object' && product.category?.name) {
+                return product.category.name.toLowerCase();
+              }
+              return (typeof product.category === 'string' ? product.category : '').toLowerCase();
+            };
+
+            const aCategory = getCategoryName(a);
+            const bCategory = getCategoryName(b);
+
+            const aIsPrinter = aCategory.includes('laser') || aCategory.includes('inkjet') || aCategory.includes('printer');
+            const bIsPrinter = bCategory.includes('laser') || bCategory.includes('inkjet') || bCategory.includes('printer');
+            const aIsInkOrToner = aCategory.includes('ink') || aCategory.includes('toner');
+            const bIsInkOrToner = bCategory.includes('ink') || bCategory.includes('toner');
+
+            if (aIsPrinter && !bIsPrinter) return -1;
+            if (!aIsPrinter && bIsPrinter) return 1;
+            if (aIsInkOrToner && !bIsInkOrToner) return -1;
+            if (!aIsInkOrToner && bIsInkOrToner) return 1;
+            return 0;
+          });
+
+          setProducts(sortedProducts);
+        } catch (retryError) {
+          console.error('Retry failed for products fetch:', retryError);
+        }
         setLoading(false);
       }
     };

@@ -10,11 +10,13 @@ export interface IOrder extends Document {
     image: string;
   }>;
   shippingAddress: {
+    fullName?: string;
     address: string;
     city: string;
     state: string;
     postalCode: string;
     country: string;
+    phone?: string;
   };
   paymentMethod: string;
   paymentResult?: {
@@ -47,11 +49,13 @@ const orderSchema = new Schema<IOrder>(
       },
     ],
     shippingAddress: {
+      fullName: String,
       address: { type: String, required: true },
       city: { type: String, required: true },
       state: { type: String, required: true },
-      postalCode: { type: String, required: true },
+      postalCode: { type: String, required: true, default: '' },
       country: { type: String, required: true },
+      phone: String,
     },
     paymentMethod: { type: String, required: true },
     paymentResult: {

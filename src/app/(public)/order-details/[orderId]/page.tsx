@@ -8,6 +8,11 @@ import Link from 'next/link';
 const OrderDetailsPage = () => {
   const { orderId: paramOrderId } = useParams();
   const router = useRouter();
+  const formatDateLabel = (value?: string | Date) => {
+    if (!value) return 'Pending';
+    const date = new Date(value);
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  };
   const [order, setOrder] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -24,7 +29,7 @@ const OrderDetailsPage = () => {
         const response = await fetch(`/api/orders/${id}`);
         if (!response.ok) throw new Error('Order not found');
         const data = await response.json();
-        setOrder(data);
+        setOrder(data?.data || data);
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
       } finally {
@@ -57,10 +62,10 @@ const OrderDetailsPage = () => {
   }
 
   const steps = [
-    { title: 'Ordered', icon: '🛒', completed: true, date: new Date(order.createdAt).toLocaleDateString() },
+    { title: 'Ordered', icon: '🛒', completed: true, date: formatDateLabel(order.createdAt) },
     { title: 'Processing', icon: '⚙️', completed: true, date: 'Usually 24-48 hrs' },
     { title: 'Shipped', icon: '🚚', completed: order.isDelivered, date: order.isDelivered ? 'Out for delivery' : 'Pending' },
-    { title: 'Delivered', icon: '📦', completed: order.isDelivered, date: order.deliveredAt || 'Pending' }
+    { title: 'Delivered', icon: '📦', completed: order.isDelivered, date: formatDateLabel(order.deliveredAt) }
   ];
 
   return (

@@ -14,6 +14,146 @@
   }
 }
 
+@layer utilities {
+  .animate-in {
+    animation-fill-mode: both;
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+
+  .zoom-in {
+    animation-name: zoomIn;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+  }
+
+  .zoom-in-95 {
+    animation-name: zoomIn95;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+  }
+
+  .slide-in-from-top-2 {
+    animation-name: slideInFromTop2;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+
+  .slide-in-from-top-4 {
+    animation-name: slideInFromTop4;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+
+  .slide-in-from-bottom-4 {
+    animation-name: slideInFromBottom4;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+
+  .slide-in-from-right-4 {
+    animation-name: slideInFromRight4;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+
+  .slide-in-from-left-4 {
+    animation-name: slideInFromLeft4;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn95 {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromTop2 {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop4 {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom4 {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight4 {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft4 {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer;

@@ -8,6 +8,12 @@ import { useAuth } from '@/contexts/AuthContext';
 const ProfilePage = () => {
   const { user, logout, updateProfile, getOrders } = useAuth();
   const router = useRouter();
+
+  const formatDateLabel = (value?: string | Date) => {
+    if (!value) return '—';
+    const date = new Date(value);
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  };
   
   const [activeTab, setActiveTab] = useState('profile');
   const [orders, setOrders] = useState<any[]>([]);
@@ -163,7 +169,7 @@ const ProfilePage = () => {
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     <label style={{ fontSize: '11px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.15em' }}>Member Since</label>
-                    <div style={{ padding: '18px 24px', background: '#f8fafc', borderRadius: '16px', fontSize: '16px', fontWeight: '800', color: '#0f172a' }}>{new Date().getFullYear()} Registry</div>
+                    <div style={{ padding: '18px 24px', background: '#f8fafc', borderRadius: '16px', fontSize: '16px', fontWeight: '800', color: '#0f172a' }}>{new Date().getUTCFullYear()} Registry</div>
                   </div>
                   {isEditing && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', gridColumn: '1 / -1' }}>
@@ -210,7 +216,7 @@ const ProfilePage = () => {
                         {orders.map(order => (
                           <tr key={order._id} style={{ borderBottom: '1px solid #f8fafc' }}>
                             <td style={{ padding: '24px 0', fontSize: '13px', fontWeight: '800', color: '#1e1e1e', fontFamily: 'monospace' }}>#{(order._id || '').slice(-8).toUpperCase()}</td>
-                            <td style={{ padding: '24px 0', fontSize: '14px', fontWeight: '600', color: '#64748b' }}>{new Date(order.createdAt).toLocaleDateString()}</td>
+                            <td style={{ padding: '24px 0', fontSize: '14px', fontWeight: '600', color: '#64748b' }}>{formatDateLabel(order.createdAt)}</td>
                             <td style={{ padding: '24px 0', fontSize: '16px', fontWeight: '900', color: '#0f172a' }}>${order.totalPrice.toFixed(2)}</td>
                             <td style={{ padding: '24px 0' }}>
                               <span style={{ display: 'inline-block', padding: '6px 14px', borderRadius: '100px', fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.05em', background: (order.status || '').toLowerCase().includes('failed') ? '#fff1f2' : (order.isPaid || order.isDelivered ? '#f0fdf4' : '#fffbeb'), color: (order.status || '').toLowerCase().includes('failed') ? '#be123c' : (order.isPaid || order.isDelivered ? '#16a34a' : '#c2410c') }}>

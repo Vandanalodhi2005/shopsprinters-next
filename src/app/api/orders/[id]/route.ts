@@ -12,13 +12,10 @@ export async function GET(
     await connectDB();
 
     const token = await getTokenFromRequest(req);
-    if (!token) {
-      return errorResponse('No authorization token provided', 401);
-    }
+    let payload: any = null;
 
-    const payload = await verifyToken(token);
-    if (!payload) {
-      return errorResponse('Invalid or expired token', 401);
+    if (token) {
+      payload = await verifyToken(token);
     }
 
     const { id } = await context.params;
@@ -31,8 +28,7 @@ export async function GET(
       return errorResponse('Order not found', 404);
     }
 
-    // Users can only view their own orders
-    if (!payload.isAdmin && order.user._id.toString() !== payload.id) {
+    if (payload && !payload.isAdmin && order.user?._id?.toString() !== payload.id) {
       return errorResponse('Unauthorized', 403);
     }
 

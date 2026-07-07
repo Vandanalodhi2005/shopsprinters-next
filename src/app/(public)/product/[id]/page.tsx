@@ -337,8 +337,8 @@ const ProductDetailsPage = () => {
                         </div>
                         <button style={{ padding: '16px 32px', background: '#1e1e1e', color: '#fff', border: 'none', borderRadius: '6px', fontSize: '12px', fontWeight: '800', textTransform: 'uppercase', cursor: 'pointer' }}>Write a Review</button>
                         <div style={{ marginTop: '40px' }}>
-                            {product.reviews && product.reviews.length > 0 ? product.reviews.map((rev: any) => (
-                                <div key={rev._id || Math.random()} style={{ padding: '32px 0', borderBottom: '1px solid #f1f5f9' }}>
+                            {product.reviews && product.reviews.length > 0 ? product.reviews.map((rev: any, index: number) => (
+                                <div key={rev._id || `review-${index}`} style={{ padding: '32px 0', borderBottom: '1px solid #f1f5f9' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                                         <div className="flex items-center gap-3">
                                           <div className="w-8 h-8 rounded-full bg-[#f3f4f6] flex items-center justify-center font-bold text-[11px] text-gray-500 uppercase">

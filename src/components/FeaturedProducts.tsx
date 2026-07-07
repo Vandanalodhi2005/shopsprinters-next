@@ -36,7 +36,7 @@ const FeaturedProducts = () => {
     const fetchProducts = async () => {
       try {
         const timestamp = Date.now();
-        const response = await fetch(`/api/products?_t=${timestamp}`, { cache: 'no-store' });
+        const response = await fetch(`/api/products?limit=all&_t=${timestamp}`, { cache: 'no-store' });
         if (!response.ok) {
           const text = await response.text();
           console.error('Products API error', response.status, text);
@@ -71,8 +71,10 @@ const FeaturedProducts = () => {
           const aCategory = getCategoryName(a);
           const bCategory = getCategoryName(b);
 
-          const aIsPrinter = aCategory.includes('printer');
-          const bIsPrinter = bCategory.includes('printer');
+          // Printers: categories like "laser", "inkjet", or anything with "printer"
+          const aIsPrinter = aCategory.includes('laser') || aCategory.includes('inkjet') || aCategory.includes('printer');
+          const bIsPrinter = bCategory.includes('laser') || bCategory.includes('inkjet') || bCategory.includes('printer');
+          // Ink & Toner
           const aIsInkOrToner = aCategory.includes('ink') || aCategory.includes('toner');
           const bIsInkOrToner = bCategory.includes('ink') || bCategory.includes('toner');
 
