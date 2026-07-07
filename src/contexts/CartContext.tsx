@@ -36,10 +36,8 @@ export const useCart = () => {
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useAuth();
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
     if (typeof window !== 'undefined') {
       const localData = localStorage.getItem('cart');
       if (localData) {
