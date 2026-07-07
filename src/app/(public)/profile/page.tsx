@@ -105,7 +105,7 @@ const ProfilePage = () => {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   style={{
-                    width: '100%', padding: '16px 20px', borderRadius: '16px', border: 'none', background: activeTab === tab.id ? '#fff1f2' : 'transparent',
+                    width: '100%', padding: '16px 20px', borderRadius: '16px', background: activeTab === tab.id ? '#fff1f2' : 'transparent',
                     color: activeTab === tab.id ? '#ff2d46' : '#64748b', fontSize: '13px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em',
                     textAlign: 'left', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '14px', transition: 'all 0.3s ease',
                     border: activeTab === tab.id ? '1.5px solid #ff2d46' : '1.5px solid transparent'
