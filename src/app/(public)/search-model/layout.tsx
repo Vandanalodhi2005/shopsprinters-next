@@ -1,0 +1,20 @@
+"use client";
+
+import { ReactNode } from "react";
+import { useSetupSettings } from "@/contexts/SetupSettingsContext";
+import SetupHeader from '../../../components/setupSelect/SetupHeader';
+
+export default function SearchModelLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const { settings } = useSetupSettings();
+
+  return (
+    <main className="min-h-screen bg-white">
+      <SetupHeader showLogo={settings.showLogo} showHeader={settings.showHeader} />
+      {children}
+    </main>
+  );
+}

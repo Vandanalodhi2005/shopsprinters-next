@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-white text-dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply btn bg-[#024ad8] text-white hover:bg-[#01369e] shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-dark border border-gray-200 hover:bg-gray-50;
+  }
+
+  .btn-accent {
+    @apply btn bg-[#ff2d46] text-white hover:bg-[#e6283e] shadow-lg;
+  }
+
+  .input,
+  .textarea,
+  .select {
+    @apply w-full bg-gray-50 border border-gray-200 px-6 py-4 rounded-2xl text-dark font-medium placeholder:text-gray-400 focus:border-[#024ad8] focus:bg-white focus:outline-none transition-all;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
