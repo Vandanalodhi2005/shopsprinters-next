@@ -39,7 +39,7 @@ const ModelSearch = ({ allowModelSearch, hideHeader = false }: { allowModelSearc
       >
         <div className="absolute inset-0">
           <img
-            src="/hero-dark-setup.png"
+            src="/hero_background_image.webp"
             alt="Background"
             className="w-full h-full object-cover object-center"
           />

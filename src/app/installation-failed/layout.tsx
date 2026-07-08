@@ -1,10 +1,4 @@
-import React from 'react';
-
-export default function EasySetupGuideLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function InstallationFailedLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <noscript>

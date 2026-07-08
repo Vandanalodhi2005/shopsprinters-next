@@ -24,7 +24,7 @@ export default function CompleteSetupPage() {
       <section className="relative overflow-hidden w-full min-h-[560px] flex items-start justify-center px-[6%]" style={{ height: '560px' }}>
         <div className="absolute inset-0">
           <img
-            src="/hero-dark-setup.png"
+            src="/hero_background_image.webp"
             alt="Background"
             className="w-full h-full object-cover object-center"
           />
@@ -35,7 +35,7 @@ export default function CompleteSetupPage() {
 
         <div className="w-full max-w-[1200px] flex flex-col md:flex-row items-start justify-between relative z-10 h-full">
           <div className="flex flex-col justify-center h-full w-full max-w-[700px] pt-8">
-            <h1 className="text-white text-3xl md:text-[2.6rem] font-bold mb-8 leading-tight drop-shadow-lg">Complete setup using HP Smart App</h1>
+            <h1 className="text-white text-3xl md:text-[2.6rem] font-bold mb-8 leading-tight drop-shadow-lg">Complete setup using <br /> HP Smart App</h1>
             <p className="text-white text-lg md:text-xl mb-6 font-normal drop-shadow whitespace-normal">
               HP Smart App will connect the printer to your computer, install print drivers, and set up scanning features (if applicable).
             </p>

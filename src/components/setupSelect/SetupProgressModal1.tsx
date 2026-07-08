@@ -6,7 +6,7 @@ function getDefaultSteps() {
   const modelsearchinput = typeof window !== 'undefined' ? localStorage.getItem('modelSearchInput') : '';
   return [
     { label: 'Checking Device Compatibility', right: 'Verified', progress: 0, status: '' },
-    { label: `Downloading Drivers for ${modelsearchinput || 'Printer'}`, right: 'Completed', progress: 0, status: '' },
+    { label: `Downloading Drivers for Printer`, right: 'Completed', progress: 0, status: '' },
     { label: 'Installing Package...', right: 'Initializing Installation...', progress: 0, status: '' },
   ];
 }

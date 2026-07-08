@@ -19,7 +19,7 @@ export default function InstallationFailedPage() {
       <SetupHeader showLogo={settings.showLogo} showHeader={settings.showHeader} />
       <div
         className="flex-1 flex items-center justify-center bg-cover bg-center px-4 py-12 relative"
-        style={{ backgroundImage: "url('/hero-dark-setup.png')" }}
+        style={{ backgroundImage: "url('/hero_background_image.webp')" }}
       >
         <div className="absolute inset-0 mix-blend-multiply"></div>
 

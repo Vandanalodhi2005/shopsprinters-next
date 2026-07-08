@@ -77,7 +77,7 @@ export default function EasySetupGuide() {
       </section>
 
       {/* Choose Your Issue Section */}
-      <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-5 md:py-10 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3 text-dark">Choose Your Issue</h2>
@@ -200,7 +200,7 @@ export default function EasySetupGuide() {
             </Link>
           </div>
 
-          <div className="mt-6 p-5 bg-gradient-to-r from-[#024AD8] to-[#023a9b] rounded-lg text-center text-white shadow-lg">
+          <div className="mt-12 p-5 bg-gradient-to-r from-[#024AD8] to-[#023a9b] rounded-lg text-center text-white shadow-lg">
             <p className="text-base mb-3">Need more help? Connect with our live chat support team for quick assistance.</p>
             <JivoChatButton className="inline-flex bg-white text-[#024AD8] px-6 py-2 rounded-full font-semibold text-sm hover:bg-[#024AD8]/10 transition-colors">
               Start Live Chat
@@ -282,7 +282,7 @@ export default function EasySetupGuide() {
             </h2>
           </div>
 
-          <div className="space-y-6\">
+          <div className="space-y-12">
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
@@ -361,72 +361,87 @@ export default function EasySetupGuide() {
             </h2>
           </div>
 
-          <div className="space-y-6\">
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-                <h3 className="text-lg font-bold text-dark">Step 1: Physical Setup</h3>
+          <div className="space-y-12">
+            <div className="relative">
+              <div className="bg-[#fff5f6] p-6 md:p-8 rounded-xl border border-gray-200 overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1.5 bg-[#024AD8] rounded-r-lg shadow-[6px_0_18px_rgba(2,74,216,0.12)]"></div>
+                <div className="relative ml-4 md:ml-5">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                    <h3 className="text-lg font-bold text-dark">Step 1: Physical Setup</h3>
+                  </div>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span><strong>Hardware:</strong> Power on the HP printer and remove all protective orange shipping tape from inside.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span><strong>Network:</strong> Put your Mac and HP printer on the same Wi-Fi network. With a cable, modern MacBooks may need a USB-C to USB-A adapter.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span><strong>Hardware:</strong> Power on the HP printer and remove all protective orange shipping tape from inside.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span><strong>Network:</strong> Put your Mac and HP printer on the same Wi-Fi network. With a cable, modern MacBooks may need a USB-C to USB-A adapter.</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-                <h3 className="text-lg font-bold text-dark">Step 2: Add the Printer</h3>
+            <div className="relative">
+              <div className="bg-[#fff5f6] p-6 md:p-8 rounded-xl border border-gray-200 overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1.5 bg-[#024AD8] rounded-r-lg shadow-[6px_0_18px_rgba(2,74,216,0.12)]"></div>
+                <div className="relative ml-4 md:ml-5">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                    <h3 className="text-lg font-bold text-dark">Step 2: Add the Printer</h3>
+                  </div>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span>Open the Apple Menu and choose System Settings (or System Preferences).</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span>Scroll to Printers & Scanners.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span>Click Add Printer, Scanner, or Fax… (or the + icon).</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span>Select your HP printer from the list.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#024AD8] font-bold mt-1">•</span>
+                      <span>In the Use dropdown, pick AirPrint if available, or download HP Easy Start from 123.hp.com/setup. Click Add.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span>Open the Apple Menu and choose System Settings (or System Preferences).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span>Scroll to Printers & Scanners.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span>Click Add Printer, Scanner, or Fax… (or the + icon).</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span>Select your HP printer from the list.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#024AD8] font-bold mt-1">•</span>
-                  <span>In the Use dropdown, pick AirPrint if available, or download HP Easy Start from 123.hp.com/setup. Click Add.</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#ff2d46] rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-                <h3 className="text-lg font-bold text-dark">Step 3: Troubleshoot Your HP Printer on Mac</h3>
+            <div className="relative">
+              <div className="bg-[#fff5f6] p-6 md:p-8 rounded-xl border border-gray-200 overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1.5 bg-[#024AD8] rounded-r-lg shadow-[6px_0_18px_rgba(2,74,216,0.12)]"></div>
+                <div className="relative ml-4 md:ml-5">
+                  <div className="flex items-center gap- mb-4">
+                    <div className="w-8 h-8 bg-[#ff2d46] rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                    <h3 className="text-lg font-bold text-dark">Step 3: Troubleshoot Your HP Printer on Mac</h3>
+                  </div>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#ff2d46] font-bold mt-1">•</span>
+                      <span><strong>Communication error:</strong> In Printers & Scanners, right-click your printer and choose "Reset printing system…" for a fresh start.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#ff2d46] font-bold mt-1">•</span>
+                      <span><strong>AirPrint not found:</strong> If your printer isn't AirPrint-ready, install the HP driver (.dmg) from 123.hp.com/setup.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#ff2d46] font-bold mt-1">•</span>
+                      <span><strong>Sleep mode:</strong> Some HP printers drop Wi-Fi in "Deep Sleep." Tap a button to wake it before printing.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#ff2d46] font-bold mt-1">•</span>
-                  <span><strong>Communication error:</strong> In Printers & Scanners, right-click your printer and choose "Reset printing system…" for a fresh start.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#ff2d46] font-bold mt-1">•</span>
-                  <span><strong>AirPrint not found:</strong> If your printer isn't AirPrint-ready, install the HP driver (.dmg) from 123.hp.com/setup.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#ff2d46] font-bold mt-1">•</span>
-                  <span><strong>Sleep mode:</strong> Some HP printers drop Wi-Fi in "Deep Sleep." Tap a button to wake it before printing.</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -437,14 +452,14 @@ export default function EasySetupGuide() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative inline-block mb-6">
             <div className="absolute inset-0 bg-[#024AD8]/10 rounded-full animate-pulse"></div>
-            <div className="relative w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl border border-[#024AD8]/20">
-              <span className="text-5xl">✅</span>
+            <div className="relative w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-xl border border-[#024AD8]/20">
+              <span className="text-L leading-none">✅</span>
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 bg-[#024AD8]/10 rounded-full px-4 py-2 mb-6 border border-[#024AD8]/20">
-            <span className="w-2 h-2 bg-[#024AD8] rounded-full"></span>
-            <span className="text-[#024AD8] font-semibold text-sm tracking-wide uppercase">Important Final Step</span>
+          <div className="inline-flex items-center gap-2 bg-[#024AD8]/8 rounded-full px-3 py-1.5 mb-6 border border-[#024AD8]/15 shadow-sm">
+            <span className="w-2 h-2 bg-[#024AD8] rounded-full block" aria-hidden="true"></span>
+            <span className="text-[#024AD8] font-medium text-xs">Important final step</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-black">
@@ -489,20 +504,34 @@ export default function EasySetupGuide() {
             </div>
           </div>
 
-          <div className="mt-10 pt-10 border-t border-[#024AD8]/10 text-left">
-            <p className="text-black font-semibold mb-4 text-base">After printing, check that:</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-black text-sm">
-              <li className="flex items-center gap-3"><span className="text-[#024AD8]">•</span> Colors are vibrant</li>
-              <li className="flex items-center gap-3"><span className="text-[#024AD8]">•</span> Text is crisp</li>
-              <li className="flex items-center gap-3"><span className="text-[#024AD8]">•</span> No streaks or lines</li>
-              <li className="flex items-center gap-3"><span className="text-[#024AD8]">•</span> Alignment is straight</li>
-            </ul>
+          <div className="mt-5 pt-5">
+            <div className="bg-[#ecf9f1] border border-[#d5edd8] rounded-3xl p-6 md:p-8 shadow-sm">
+              <p className="text-slate-900 font-bold mb-5 text-base text-large ">After printing, check that:</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-800 text-sm">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#34a853]"></span>
+                  <span>Colors are vibrant</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#34a853]"></span>
+                  <span>Text is crisp</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#34a853]"></span>
+                  <span>No streaks or lines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#34a853]"></span>
+                  <span>Alignment is straight</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-10 md:py-14 px-4 bg-white">
+      <section className="py-10 md:py-14 px-4 bg-gray-50\">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8\">
             <div className="flex-1">
