@@ -39,7 +39,7 @@ const ModelSearch = ({ allowModelSearch, hideHeader = false }: { allowModelSearc
       >
         <div className="absolute inset-0">
           <img
-            src="/hero-easy.png"
+            src="/hero-dark-setup.png"
             alt="Background"
             className="w-full h-full object-cover object-center"
           />
@@ -62,7 +62,7 @@ const ModelSearch = ({ allowModelSearch, hideHeader = false }: { allowModelSearc
               />
               <button
                 type="submit"
-                className="md:ml-4 ml-0 bg-white text-[#024AD8] font-semibold px-8 py-3 rounded-full text-base sm:text-lg shadow hover:bg-[#024AD8]/10 transition w-full md:w-auto min-w-[120px]"
+                className="md:ml-4 ml-0 bg-white text-[#024AD8] font-semibold px-8 py-3 rounded-full text-base sm:text-lg shadow hover:bg-[#024AD8] hover:text-white  transition w-full md:w-auto min-w-[120px]"
               >
                 Search
               </button>

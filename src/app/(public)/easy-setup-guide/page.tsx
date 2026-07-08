@@ -36,7 +36,7 @@ export default function EasySetupGuide() {
         {/* Background Image with blue tint */}
         <div className="absolute inset-0">
           <Image
-            src="/hero-easy.png"
+            src="/hero-dark-setup.png"
             alt="Background"
             fill
             className="object-cover"
@@ -77,78 +77,126 @@ export default function EasySetupGuide() {
       </section>
 
       {/* Choose Your Issue Section */}
-      <section className="py-10 md:py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-dark">Choose Your Issue</h2>
-            <p className="text-gray-600 text-base max-w-2xl mx-auto">Select an option below for smart printer setup and troubleshooting.</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-dark">Choose Your Issue</h2>
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">Select an option below for smart printer setup and troubleshooting.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/search-model" className="bg-white border-2 border-[#024AD8] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[#024AD8] transition-colors">
-                <svg className="w-5 h-5 text-[#024AD8] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Link href="/search-model" className="group relative bg-white border border-[#024AD8]/30 rounded-2xl p-6 md:p-7 hover:border-[#024AD8] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#024AD8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-4 group-hover:from-[#024AD8] group-hover:to-[#023a9b] transition-all duration-300 shadow-md group-hover:shadow-lg">
+                  <svg className="w-7 h-7 text-[#024AD8] group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-[#024AD8] group-hover:text-[#023a9b] transition-colors">New Printer Setup</h3>
+                <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed">New printer in the box? Go from unboxed to first print without the hassle.</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#024AD8] text-white rounded-full font-semibold text-sm hover:bg-[#023a9b] group-hover:shadow-lg transition-all duration-300">
+                  <span>Start Setup</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">New Printer Setup</h3>
-              <p className="text-gray-600 mb-2 text-xs">New printer in the box? Go from unboxed to first print without the hassle.</p>
-              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Start Printer Setup →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#024AD8] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[#024AD8] transition-colors">
-                <svg className="w-5 h-5 text-[#024AD8] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
-                </svg>
+            <Link href="/search-model" className="group relative bg-white border border-[#024AD8]/30 rounded-2xl p-6 md:p-7 hover:border-[#024AD8] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#024AD8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-4 group-hover:from-[#024AD8] group-hover:to-[#023a9b] transition-all duration-300 shadow-md group-hover:shadow-lg">
+                  <svg className="w-7 h-7 text-[#024AD8] group-hover:text-white group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
+                  </svg>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-[#024AD8] group-hover:text-[#023a9b] transition-colors">Printer Shows Offline</h3>
+                <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed">Printer showing offline again? Get it back online in minutes — for good.</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#024AD8] text-white rounded-full font-semibold text-sm hover:bg-[#023a9b] group-hover:shadow-lg transition-all duration-300">
+                  <span>Fix Offline</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Printer Shows Offline</h3>
-              <p className="text-gray-600 mb-2 text-xs">Printer showing offline again? Get it back online in minutes — for good.</p>
-              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Fix Offline Printer →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#024AD8] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[#024AD8] transition-colors">
-                <svg className="w-5 h-5 text-[#024AD8] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
+            <Link href="/search-model" className="group relative bg-white border border-[#024AD8]/30 rounded-2xl p-6 md:p-7 hover:border-[#024AD8] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#024AD8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-4 group-hover:from-[#024AD8] group-hover:to-[#023a9b] transition-all duration-300 shadow-md group-hover:shadow-lg">
+                  <svg className="w-7 h-7 text-[#024AD8] group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-[#024AD8] group-hover:text-[#023a9b] transition-colors">Install Printer Drivers</h3>
+                <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed">Wrong or outdated drivers? Get the exact match for your model installed.</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#024AD8] text-white rounded-full font-semibold text-sm hover:bg-[#023a9b] group-hover:shadow-lg transition-all duration-300">
+                  <span>Install Drivers</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Install Printer Drivers</h3>
-              <p className="text-gray-600 mb-2 text-xs">Wrong or outdated drivers? Get the exact match for your model installed.</p>
-              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Install Printer Drivers →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#024AD8] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[#024AD8] transition-colors">
-                <svg className="w-5 h-5 text-[#024AD8] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-                </svg>
+            <Link href="/search-model" className="group relative bg-white border border-[#024AD8]/30 rounded-2xl p-6 md:p-7 hover:border-[#024AD8] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#024AD8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-4 group-hover:from-[#024AD8] group-hover:to-[#023a9b] transition-all duration-300 shadow-md group-hover:shadow-lg">
+                  <svg className="w-7 h-7 text-[#024AD8] group-hover:text-white group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                  </svg>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-[#024AD8] group-hover:text-[#023a9b] transition-colors">WiFi Connection Drops</h3>
+                <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed">Tired of your printer vanishing from WiFi? Lock in a connection that lasts.</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#024AD8] text-white rounded-full font-semibold text-sm hover:bg-[#023a9b] group-hover:shadow-lg transition-all duration-300">
+                  <span>Fix WiFi</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">WiFi Connection Drops</h3>
-              <p className="text-gray-600 mb-2 text-xs">Tired of your printer vanishing from WiFi? Lock in a connection that lasts.</p>
-              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Fix Connectivity Issue →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#024AD8] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[#024AD8] transition-colors">
-                <svg className="w-5 h-5 text-[#024AD8] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
+            <Link href="/search-model" className="group relative bg-white border border-[#024AD8]/30 rounded-2xl p-6 md:p-7 hover:border-[#024AD8] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#024AD8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-4 group-hover:from-[#024AD8] group-hover:to-[#023a9b] transition-all duration-300 shadow-md group-hover:shadow-lg">
+                  <svg className="w-7 h-7 text-[#024AD8] group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-[#024AD8] group-hover:text-[#023a9b] transition-colors">Error Codes / Not Detected</h3>
+                <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed">Flashing lights or cryptic errors? Get a real diagnosis, not guesswork.</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#024AD8] text-white rounded-full font-semibold text-sm hover:bg-[#023a9b] group-hover:shadow-lg transition-all duration-300">
+                  <span>Diagnose</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Error Codes / Not Detected</h3>
-              <p className="text-gray-600 mb-2 text-xs">Flashing lights or cryptic errors? Get a real diagnosis, not guesswork.</p>
-              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Diagnose Printer Error →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#024AD8] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[#024AD8] transition-colors">
-                <svg className="w-5 h-5 text-[#024AD8] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+            <Link href="/search-model" className="group relative bg-white border border-[#024AD8]/30 rounded-2xl p-6 md:p-7 hover:border-[#024AD8] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#024AD8]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-4 group-hover:from-[#024AD8] group-hover:to-[#023a9b] transition-all duration-300 shadow-md group-hover:shadow-lg">
+                  <svg className="w-7 h-7 text-[#024AD8] group-hover:text-white group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-[#024AD8] group-hover:text-[#023a9b] transition-colors">Scanner Not Working?</h3>
+                <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed">Blank scans or streaky pages? Bring back crisp, clean prints today.</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#024AD8] text-white rounded-full font-semibold text-sm hover:bg-[#023a9b] group-hover:shadow-lg transition-all duration-300">
+                  <span>Fix Scanner</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Scanner Not Working?</h3>
-              <p className="text-gray-600 mb-2 text-xs">Blank scans or streaky pages? Bring back crisp, clean prints today.</p>
-              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Fix Scanner Issue →</span>
             </Link>
           </div>
 
@@ -174,48 +222,48 @@ export default function EasySetupGuide() {
           </div>
 
           {/* Steps with Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4\">
-            <div className="border-2 border-[#024AD8] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="relative h-32 bg-gray-100 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="border border-[#024AD8]/60 rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group shadow-md">
+              <div className="relative h-40 md:h-44 bg-gray-100 overflow-hidden">
                 <Image src="/banner-1.jpg" alt="Download HP Software" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-4 bg-white">
-                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">1</div>
-                <h3 className="text-base font-bold mb-1 text-[#024AD8]">Download HP Software</h3>
-                <p className="text-gray-600 text-xs">Get the latest HP drivers and software from 123.hp.com/setup, matched to your exact model.</p>
+              <div className="p-5 md:p-6 bg-white">
+                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-3 text-sm">1</div>
+                <h3 className="text-sm md:text-base font-bold mb-2 text-[#024AD8]">Download HP Software</h3>
+                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Get the latest HP drivers and software from 123.hp.com/setup, matched to your exact model.</p>
               </div>
             </div>
 
-            <div className="border-2 border-[#024AD8] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="relative h-32 bg-gray-100 overflow-hidden">
+            <div className="border border-[#024AD8]/60 rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group shadow-md">
+              <div className="relative h-40 md:h-44 bg-gray-100 overflow-hidden">
                 <Image src="/banner-2.jpg" alt="Connect Your Printer" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-4 bg-white">
-                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">2</div>
-                <h3 className="text-base font-bold mb-1 text-[#024AD8]">Connect Your Printer</h3>
-                <p className="text-gray-600 text-xs">Link your HP printer over Wi-Fi or USB using the printer's built-in setup screen.</p>
+              <div className="p-5 md:p-6 bg-white">
+                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-3 text-sm">2</div>
+                <h3 className="text-sm md:text-base font-bold mb-2 text-[#024AD8]">Connect Your Printer</h3>
+                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Link your HP printer over Wi-Fi or USB using the printer's built-in setup screen.</p>
               </div>
             </div>
 
-            <div className="border-2 border-[#024AD8] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="relative h-32 bg-gray-100 overflow-hidden">
+            <div className="border border-[#024AD8]/60 rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group shadow-md">
+              <div className="relative h-40 md:h-44 bg-gray-100 overflow-hidden">
                 <Image src="/banner-3.jpg" alt="Install the Printer Drivers" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-4 bg-white">
-                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">3</div>
-                <h3 className="text-base font-bold mb-1 text-[#024AD8]">Install the Printer Drivers</h3>
-                <p className="text-gray-600 text-xs">Follow the on-screen HP Smart prompts to finish installation and add your device.</p>
+              <div className="p-5 md:p-6 bg-white">
+                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-3 text-sm">3</div>
+                <h3 className="text-sm md:text-base font-bold mb-2 text-[#024AD8]">Install the Printer Drivers</h3>
+                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Follow the on-screen HP Smart prompts to finish installation and add your device.</p>
               </div>
             </div>
 
-            <div className="border-2 border-[#024AD8] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
-              <div className="relative h-32 bg-gray-100 overflow-hidden">
+            <div className="border border-[#024AD8]/60 rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group shadow-md">
+              <div className="relative h-40 md:h-44 bg-gray-100 overflow-hidden">
                 <Image src="/banner-4.jpg" alt="Test the Printer" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-4 bg-white">
-                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">4</div>
-                <h3 className="text-base font-bold mb-1 text-[#024AD8]">Test the Printer</h3>
-                <p className="text-gray-600 text-xs">Print a test page to confirm your HP printer is online and working correctly.</p>
+              <div className="p-5 md:p-6 bg-white">
+                <div className="w-8 h-8 bg-[#024AD8] rounded-full flex items-center justify-center text-white font-bold mb-3 text-sm">4</div>
+                <h3 className="text-sm md:text-base font-bold mb-2 text-[#024AD8]">Test the Printer</h3>
+                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Print a test page to confirm your HP printer is online and working correctly.</p>
               </div>
             </div>
           </div>

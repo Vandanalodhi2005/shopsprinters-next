@@ -24,7 +24,7 @@ export default function CompleteSetupPage() {
       <section className="relative overflow-hidden w-full min-h-[560px] flex items-start justify-center px-[6%]" style={{ height: '560px' }}>
         <div className="absolute inset-0">
           <img
-            src="/hero-easy.png"
+            src="/hero-dark-setup.png"
             alt="Background"
             className="w-full h-full object-cover object-center"
           />
