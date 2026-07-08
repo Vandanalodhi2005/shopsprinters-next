@@ -58,11 +58,11 @@ const ModelSearch = ({ allowModelSearch, hideHeader = false }: { allowModelSearc
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder='Enter your product name here. For example: "OfficeJet 9010"'
-                className="flex-1 px-4 py-3 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 text-base sm:text-lg bg-white shadow-sm w-full min-w-0"
+                className="flex-1 px-4 py-3 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[rgb(2_74_216_/_0.75)] text-base sm:text-lg bg-white shadow-sm w-full min-w-0"
               />
               <button
                 type="submit"
-                className="md:ml-4 ml-0 bg-white text-blue-700 font-semibold px-8 py-3 rounded-full text-base sm:text-lg shadow hover:bg-blue-50 transition w-full md:w-auto min-w-[120px]"
+                className="md:ml-4 ml-0 bg-white text-[rgb(2_74_216_/_0.75)] font-semibold px-8 py-3 rounded-full text-base sm:text-lg shadow hover:bg-[rgb(2_74_216_/_0.1)] transition w-full md:w-auto min-w-[120px]"
               >
                 Search
               </button>
@@ -87,7 +87,7 @@ const ModelSearch = ({ allowModelSearch, hideHeader = false }: { allowModelSearc
           </p>
           <p className="text-gray-700 text-base sm:text-[1.05rem] md:text-[1.15rem]">
             Need additional help with set-up? Visit{' '}
-            <a href="#" className="text-blue-600 underline hover:text-blue-800" aria-label="HP support">
+            <a href="#" className="text-[rgb(2_74_216_/_0.75)] underline hover:text-[rgb(2_74_216_/_0.95)]" aria-label="HP support">
               support
             </a>
           </p>

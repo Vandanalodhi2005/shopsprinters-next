@@ -45,29 +45,29 @@ export default function EasySetupGuide() {
         
         </div>
 
-        <div className="max-w-7xl mx-auto text-center relative z-10 px-6 py-16 md:py-24">
-          <h1 className="text-3xl md:text-4xl lg:text-[44px] font-bold mb-6 text-white leading-tight tracking-tight">
+        <div className="max-w-7xl mx-auto text-center relative z-10 px-6 py-8 md:py-12">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-white leading-tight tracking-tight">
             Smart Printer Setup & Troubleshooting
           </h1>
-          <p className="text-base md:text-lg mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-sm md:text-base mb-6 text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
             Setup, offline errors, WiFi drops, driver issues — guided solutions that get you printing again in minutes.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-5">
+          <div className="flex flex-wrap justify-center gap-3">
             <Link 
               href="/search-model/" 
-              className="inline-flex items-center gap-2 bg-[#28a745] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#218838] transition-all duration-200 shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#28a745] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#218838] transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd"/>
               </svg>
               QUICK SETUP
             </Link>
             <Link 
               href="/search-model/" 
-              className="inline-flex items-center gap-2 bg-[#28a745] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#218838] transition-all duration-200 shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#28a745] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#218838] transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"/>
               </svg>
               EASY TROUBLESHOOTING
@@ -77,84 +77,84 @@ export default function EasySetupGuide() {
       </section>
 
       {/* Choose Your Issue Section */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-10 md:py-16 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark">Choose Your Issue</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Select an option below for smart printer setup and troubleshooting.</p>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-dark">Choose Your Issue</h2>
+            <p className="text-gray-600 text-base max-w-2xl mx-auto">Select an option below for smart printer setup and troubleshooting.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/search-model" className="bg-white border-2 border-[#0072b5] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0072b5] transition-colors">
-                <svg className="w-7 h-7 text-[#0072b5] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link href="/search-model" className="bg-white border-2 border-[rgb(2_74_216_/_0.75)] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[rgb(2_74_216_/_0.75)] transition-colors">
+                <svg className="w-5 h-5 text-[rgb(2_74_216_/_0.75)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#0072b5] group-hover:text-[#005b90]">New Printer Setup</h3>
-              <p className="text-gray-600 mb-4 text-sm">New printer in the box? Go from unboxed to first print without the hassle.</p>
-              <span className="inline-block text-[#0072b5] font-semibold text-sm group-hover:underline">Start Printer Setup →</span>
+              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">New Printer Setup</h3>
+              <p className="text-gray-600 mb-2 text-xs">New printer in the box? Go from unboxed to first print without the hassle.</p>
+              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Start Printer Setup →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#0072b5] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0072b5] transition-colors">
-                <svg className="w-7 h-7 text-[#0072b5] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/search-model" className="bg-white border-2 border-[rgb(2_74_216_/_0.75)] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[rgb(2_74_216_/_0.75)] transition-colors">
+                <svg className="w-5 h-5 text-[rgb(2_74_216_/_0.75)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#0072b5] group-hover:text-[#005b90]">Printer Shows Offline</h3>
-              <p className="text-gray-600 mb-4 text-sm">Printer showing offline again? Get it back online in minutes — for good.</p>
-              <span className="inline-block text-[#0072b5] font-semibold text-sm group-hover:underline">Fix Offline Printer →</span>
+              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Printer Shows Offline</h3>
+              <p className="text-gray-600 mb-2 text-xs">Printer showing offline again? Get it back online in minutes — for good.</p>
+              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Fix Offline Printer →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#0072b5] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0072b5] transition-colors">
-                <svg className="w-7 h-7 text-[#0072b5] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/search-model" className="bg-white border-2 border-[rgb(2_74_216_/_0.75)] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[rgb(2_74_216_/_0.75)] transition-colors">
+                <svg className="w-5 h-5 text-[rgb(2_74_216_/_0.75)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#0072b5] group-hover:text-[#005b90]">Install Printer Drivers</h3>
-              <p className="text-gray-600 mb-4 text-sm">Wrong or outdated drivers? Get the exact match for your model installed.</p>
-              <span className="inline-block text-[#0072b5] font-semibold text-sm group-hover:underline">Install Printer Drivers →</span>
+              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Install Printer Drivers</h3>
+              <p className="text-gray-600 mb-2 text-xs">Wrong or outdated drivers? Get the exact match for your model installed.</p>
+              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Install Printer Drivers →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#0072b5] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0072b5] transition-colors">
-                <svg className="w-7 h-7 text-[#0072b5] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/search-model" className="bg-white border-2 border-[rgb(2_74_216_/_0.75)] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[rgb(2_74_216_/_0.75)] transition-colors">
+                <svg className="w-5 h-5 text-[rgb(2_74_216_/_0.75)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#0072b5] group-hover:text-[#005b90]">WiFi Connection Drops</h3>
-              <p className="text-gray-600 mb-4 text-sm">Tired of your printer vanishing from WiFi? Lock in a connection that lasts.</p>
-              <span className="inline-block text-[#0072b5] font-semibold text-sm group-hover:underline">Fix Connectivity Issue →</span>
+              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">WiFi Connection Drops</h3>
+              <p className="text-gray-600 mb-2 text-xs">Tired of your printer vanishing from WiFi? Lock in a connection that lasts.</p>
+              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Fix Connectivity Issue →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#0072b5] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0072b5] transition-colors">
-                <svg className="w-7 h-7 text-[#0072b5] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/search-model" className="bg-white border-2 border-[rgb(2_74_216_/_0.75)] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[rgb(2_74_216_/_0.75)] transition-colors">
+                <svg className="w-5 h-5 text-[rgb(2_74_216_/_0.75)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#0072b5] group-hover:text-[#005b90]">Error Codes / Not Detected</h3>
-              <p className="text-gray-600 mb-4 text-sm">Flashing lights or cryptic errors? Get a real diagnosis, not guesswork.</p>
-              <span className="inline-block text-[#0072b5] font-semibold text-sm group-hover:underline">Diagnose Printer Error →</span>
+              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Error Codes / Not Detected</h3>
+              <p className="text-gray-600 mb-2 text-xs">Flashing lights or cryptic errors? Get a real diagnosis, not guesswork.</p>
+              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Diagnose Printer Error →</span>
             </Link>
 
-            <Link href="/search-model" className="bg-white border-2 border-[#0072b5] p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0072b5] transition-colors">
-                <svg className="w-7 h-7 text-[#0072b5] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link href="/search-model" className="bg-white border-2 border-[rgb(2_74_216_/_0.75)] p-4 rounded-lg hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-2 group-hover:bg-[rgb(2_74_216_/_0.75)] transition-colors">
+                <svg className="w-5 h-5 text-[rgb(2_74_216_/_0.75)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#0072b5] group-hover:text-[#005b90]">Scanner Not Working?</h3>
-              <p className="text-gray-600 mb-4 text-sm">Blank scans or streaky pages? Bring back crisp, clean prints today.</p>
-              <span className="inline-block text-[#0072b5] font-semibold text-sm group-hover:underline">Fix Scanner Issue →</span>
+              <h3 className="text-base font-bold mb-1 text-[#024AD8] group-hover:text-[#023a9b]">Scanner Not Working?</h3>
+              <p className="text-gray-600 mb-2 text-xs">Blank scans or streaky pages? Bring back crisp, clean prints today.</p>
+              <span className="inline-block text-[#024AD8] font-semibold text-xs group-hover:underline">Fix Scanner Issue →</span>
             </Link>
           </div>
 
-          <div className="mt-12 p-8 bg-gradient-to-r from-[#0072b5] to-[#005b90] rounded-xl text-center text-white shadow-lg">
-            <p className="text-lg mb-4">Need more help? Connect with our live chat support team for quick assistance.</p>
-            <JivoChatButton className="inline-flex bg-white text-[#0072b5] px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+          <div className="mt-6 p-5 bg-gradient-to-r from-[#024AD8] to-[#023a9b] rounded-lg text-center text-white shadow-lg">
+            <p className="text-base mb-3">Need more help? Connect with our live chat support team for quick assistance.</p>
+            <JivoChatButton className="inline-flex bg-white text-[#024AD8] px-6 py-2 rounded-full font-semibold text-sm hover:bg-[#024AD8]/10 transition-colors">
               Start Live Chat
             </JivoChatButton>
           </div>
@@ -162,60 +162,60 @@ export default function EasySetupGuide() {
       </section>
 
       {/* 123.Hp.Com/setup Guide Section */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      <section className="py-10 md:py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-dark">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-dark">
               123.Hp.Com/setup Guide – HP Printer Setup & Offline Fix
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
               Set up your HP printer the easy way using the 123.hp.com/setup process. This step-by-step guide walks you through installing your new HP printer, connecting it to Wi-Fi, fixing the dreaded HP printer offline error, and troubleshooting common problems — with clear instructions for both Windows and Mac.
             </p>
           </div>
 
           {/* Steps with Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="border-2 border-[#0072b5] rounded-xl overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4\">
+            <div className="border-2 border-[rgb(2_74_216_/_0.75)] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="relative h-32 bg-gray-100 overflow-hidden">
                 <Image src="/banner-1.jpg" alt="Download HP Software" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-6 bg-white">
-                <div className="w-10 h-10 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold mb-3">1</div>
-                <h3 className="text-lg font-bold mb-2 text-[#0072b5]">Download HP Software</h3>
-                <p className="text-gray-600 text-sm">Get the latest HP drivers and software from 123.hp.com/setup, matched to your exact model.</p>
+              <div className="p-4 bg-white">
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">1</div>
+                <h3 className="text-base font-bold mb-1 text-[rgb(2_74_216_/_0.75)]">Download HP Software</h3>
+                <p className="text-gray-600 text-xs">Get the latest HP drivers and software from 123.hp.com/setup, matched to your exact model.</p>
               </div>
             </div>
 
-            <div className="border-2 border-[#0072b5] rounded-xl overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
+            <div className="border-2 border-[rgb(2_74_216_/_0.75)] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="relative h-32 bg-gray-100 overflow-hidden">
                 <Image src="/banner-2.jpg" alt="Connect Your Printer" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-6 bg-white">
-                <div className="w-10 h-10 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold mb-3">2</div>
-                <h3 className="text-lg font-bold mb-2 text-[#0072b5]">Connect Your Printer</h3>
-                <p className="text-gray-600 text-sm">Link your HP printer over Wi-Fi or USB using the printer's built-in setup screen.</p>
+              <div className="p-4 bg-white">
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">2</div>
+                <h3 className="text-base font-bold mb-1 text-[rgb(2_74_216_/_0.75)]">Connect Your Printer</h3>
+                <p className="text-gray-600 text-xs">Link your HP printer over Wi-Fi or USB using the printer's built-in setup screen.</p>
               </div>
             </div>
 
-            <div className="border-2 border-[#0072b5] rounded-xl overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
+            <div className="border-2 border-[rgb(2_74_216_/_0.75)] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="relative h-32 bg-gray-100 overflow-hidden">
                 <Image src="/banner-3.jpg" alt="Install the Printer Drivers" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-6 bg-white">
-                <div className="w-10 h-10 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold mb-3">3</div>
-                <h3 className="text-lg font-bold mb-2 text-[#0072b5]">Install the Printer Drivers</h3>
-                <p className="text-gray-600 text-sm">Follow the on-screen HP Smart prompts to finish installation and add your device.</p>
+              <div className="p-4 bg-white">
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">3</div>
+                <h3 className="text-base font-bold mb-1 text-[rgb(2_74_216_/_0.75)]">Install the Printer Drivers</h3>
+                <p className="text-gray-600 text-xs">Follow the on-screen HP Smart prompts to finish installation and add your device.</p>
               </div>
             </div>
 
-            <div className="border-2 border-[#0072b5] rounded-xl overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
+            <div className="border-2 border-[rgb(2_74_216_/_0.75)] rounded-lg overflow-hidden hover:shadow-lg hover:scale-102 transition-all duration-300 group">
+              <div className="relative h-32 bg-gray-100 overflow-hidden">
                 <Image src="/banner-4.jpg" alt="Test the Printer" fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <div className="p-6 bg-white">
-                <div className="w-10 h-10 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold mb-3">4</div>
-                <h3 className="text-lg font-bold mb-2 text-[#0072b5]">Test the Printer</h3>
-                <p className="text-gray-600 text-sm">Print a test page to confirm your HP printer is online and working correctly.</p>
+              <div className="p-4 bg-white">
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold mb-2 text-sm">4</div>
+                <h3 className="text-base font-bold mb-1 text-[rgb(2_74_216_/_0.75)]">Test the Printer</h3>
+                <p className="text-gray-600 text-xs">Print a test page to confirm your HP printer is online and working correctly.</p>
               </div>
             </div>
           </div>
@@ -223,38 +223,38 @@ export default function EasySetupGuide() {
       </section>
 
       {/* Windows Setup Section */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-10 md:py-14 px-4 bg-gradient-to-b from-gray-50 to-white\">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-4 mb-10">
-            <div className="w-16 h-16 bg-[#0072b5] rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg">
+          <div className="flex items-center gap-4 mb-8\">
+            <div className="w-14 h-14 bg-[rgb(2_74_216_/_0.75)] rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg\">
               🖥️
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-dark">
+            <h2 className="text-xl md:text-2xl font-bold text-dark\">
               HP Printer Setup for Windows (10 & 11)
             </h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6\">
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                 <h3 className="text-lg font-bold text-dark">Step 1: Physical Setup</h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span><strong>Power & Ink:</strong> Plug the HP printer into a power outlet, switch it on, and install the ink cartridges or toner.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span><strong>Paper:</strong> Load the paper tray and slide the guides snug against the paper.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span><strong>Wireless:</strong> On the printer's screen, open "Network Settings" or "Wi-Fi Setup" and join your home network.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span><strong>USB:</strong> Prefer a cable? Connect the USB cable from the printer to your PC.</span>
                 </li>
               </ul>
@@ -262,7 +262,7 @@ export default function EasySetupGuide() {
 
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                 <h3 className="text-lg font-bold text-dark">Step 2: Add the Printer & Install Drivers</h3>
               </div>
               <ol className="space-y-3 text-gray-700 list-decimal list-inside">
@@ -302,30 +302,30 @@ export default function EasySetupGuide() {
       </section>
 
       {/* Mac Setup Section */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      <section className="py-10 md:py-14 px-4 bg-white\">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-4 mb-10">
-            <div className="w-16 h-16 bg-[#0072b5] rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg">
+          <div className="flex items-center gap-4 mb-8\">
+            <div className="w-14 h-14 bg-[rgb(2_74_216_/_0.75)] rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg\">
               🖥️
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-dark">
+            <h2 className="text-xl md:text-2xl font-bold text-dark\">
               HP Printer Setup for Mac (macOS)
             </h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6\">
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                 <h3 className="text-lg font-bold text-dark">Step 1: Physical Setup</h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span><strong>Hardware:</strong> Power on the HP printer and remove all protective orange shipping tape from inside.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span><strong>Network:</strong> Put your Mac and HP printer on the same Wi-Fi network. With a cable, modern MacBooks may need a USB-C to USB-A adapter.</span>
                 </li>
               </ul>
@@ -333,28 +333,28 @@ export default function EasySetupGuide() {
 
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-[#0072b5] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                <div className="w-8 h-8 bg-[rgb(2_74_216_/_0.75)] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                 <h3 className="text-lg font-bold text-dark">Step 2: Add the Printer</h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span>Open the Apple Menu and choose System Settings (or System Preferences).</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span>Scroll to Printers & Scanners.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span>Click Add Printer, Scanner, or Fax… (or the + icon).</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span>Select your HP printer from the list.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#0072b5] font-bold mt-1">•</span>
+                  <span className="text-[rgb(2_74_216_/_0.75)] font-bold mt-1">•</span>
                   <span>In the Use dropdown, pick AirPrint if available, or download HP Easy Start from 123.hp.com/setup. Click Add.</span>
                 </li>
               </ul>
@@ -385,18 +385,18 @@ export default function EasySetupGuide() {
       </section>
 
       {/* Final Step Section - Redesigned */}
-      <section className="py-16 md:py-24 px-4 bg-white overflow-hidden">
+      <section className="py-10 md:py-14 px-4 bg-white overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 bg-[#0072b5]/10 rounded-full animate-pulse"></div>
-            <div className="relative w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl border border-[#0072b5]/20">
+          <div className="relative inline-block mb-6">
+            <div className="absolute inset-0 bg-[rgb(2_74_216_/_0.75)]/10 rounded-full animate-pulse"></div>
+            <div className="relative w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl border border-[rgb(2_74_216_/_0.75)]/20">
               <span className="text-5xl">✅</span>
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 bg-[#0072b5]/10 rounded-full px-4 py-2 mb-6 border border-[#0072b5]/20">
-            <span className="w-2 h-2 bg-[#0072b5] rounded-full"></span>
-            <span className="text-[#0072b5] font-semibold text-sm tracking-wide uppercase">Important Final Step</span>
+          <div className="inline-flex items-center gap-2 bg-[rgb(2_74_216_/_0.75)]/10 rounded-full px-4 py-2 mb-6 border border-[rgb(2_74_216_/_0.75)]/20">
+            <span className="w-2 h-2 bg-[rgb(2_74_216_/_0.75)] rounded-full"></span>
+            <span className="text-[rgb(2_74_216_/_0.75)] font-semibold text-sm tracking-wide uppercase">Important Final Step</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-black">
@@ -408,9 +408,9 @@ export default function EasySetupGuide() {
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-[#f8fafc] rounded-3xl p-7 border border-[#0072b5]/10 shadow-sm">
+            <div className="bg-[#f8fafc] rounded-3xl p-7 border border-[rgb(2_74_216_/_0.75)]/10 shadow-sm">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-11 h-11 bg-[#0072b5]/10 rounded-2xl flex items-center justify-center text-[#0072b5]">
+                <div className="w-11 h-11 bg-[rgb(2_74_216_/_0.75)]/10 rounded-2xl flex items-center justify-center text-[rgb(2_74_216_/_0.75)]">
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M0 3.449L9.75 2.1v9.451H0V3.449zm10.949-1.649L24 2.1v9.451H10.949V1.8zm-10.949 11.1H9.75v9.451l-9.75-1.35v-8.1zm10.949-1.35H24v9.451l-12.301-1.649v-7.802z"/>
                   </svg>
@@ -419,14 +419,14 @@ export default function EasySetupGuide() {
               </div>
               <ol className="space-y-3 text-black text-sm">
                 <li className="flex items-center gap-3"><span className="font-semibold">1.</span><span>Open any document</span></li>
-                <li className="flex items-center gap-3"><span className="font-semibold text-[#0072b5]">2.</span><span>Press <kbd className="bg-black/5 px-2 py-1 rounded text-xs font-mono text-black">Ctrl + P</kbd></span></li>
+                <li className="flex items-center gap-3"><span className="font-semibold text-[rgb(2_74_216_/_0.75)]">2.</span><span>Press <kbd className="bg-black/5 px-2 py-1 rounded text-xs font-mono text-black">Ctrl + P</kbd></span></li>
                 <li className="flex items-center gap-3"><span className="font-semibold">3.</span><span>Click Print</span></li>
               </ol>
             </div>
 
-            <div className="bg-[#f8fafc] rounded-3xl p-7 border border-[#0072b5]/10 shadow-sm">
+            <div className="bg-[#f8fafc] rounded-3xl p-7 border border-[rgb(2_74_216_/_0.75)]/10 shadow-sm">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-11 h-11 bg-[#0072b5]/10 rounded-2xl flex items-center justify-center text-[#0072b5]">
+                <div className="w-11 h-11 bg-[rgb(2_74_216_/_0.75)]/10 rounded-2xl flex items-center justify-center text-[rgb(2_74_216_/_0.75)]">
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
@@ -435,28 +435,28 @@ export default function EasySetupGuide() {
               </div>
               <ol className="space-y-3 text-black text-sm">
                 <li className="flex items-center gap-3"><span className="font-semibold">1.</span><span>Open any document</span></li>
-                <li className="flex items-center gap-3"><span className="font-semibold text-[#0072b5]">2.</span><span>Press <kbd className="bg-black/5 px-2 py-1 rounded text-xs font-mono text-black">Cmd + P</kbd></span></li>
+                <li className="flex items-center gap-3"><span className="font-semibold text-[rgb(2_74_216_/_0.75)]">2.</span><span>Press <kbd className="bg-black/5 px-2 py-1 rounded text-xs font-mono text-black">Cmd + P</kbd></span></li>
                 <li className="flex items-center gap-3"><span className="font-semibold">3.</span><span>Click Print</span></li>
               </ol>
             </div>
           </div>
 
-          <div className="mt-10 pt-10 border-t border-[#0072b5]/10 text-left">
+          <div className="mt-10 pt-10 border-t border-[rgb(2_74_216_/_0.75)]/10 text-left">
             <p className="text-black font-semibold mb-4 text-base">After printing, check that:</p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-black text-sm">
-              <li className="flex items-center gap-3"><span className="text-[#0072b5]">•</span> Colors are vibrant</li>
-              <li className="flex items-center gap-3"><span className="text-[#0072b5]">•</span> Text is crisp</li>
-              <li className="flex items-center gap-3"><span className="text-[#0072b5]">•</span> No streaks or lines</li>
-              <li className="flex items-center gap-3"><span className="text-[#0072b5]">•</span> Alignment is straight</li>
+              <li className="flex items-center gap-3"><span className="text-[rgb(2_74_216_/_0.75)]">•</span> Colors are vibrant</li>
+              <li className="flex items-center gap-3"><span className="text-[rgb(2_74_216_/_0.75)]">•</span> Text is crisp</li>
+              <li className="flex items-center gap-3"><span className="text-[rgb(2_74_216_/_0.75)]">•</span> No streaks or lines</li>
+              <li className="flex items-center gap-3"><span className="text-[rgb(2_74_216_/_0.75)]">•</span> Alignment is straight</li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4 bg-white">
+      <section className="py-10 md:py-14 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-8\">
             <div className="flex-1">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-dark">Still Need Help? Chat with an Expert Now</h2>
               <p className="text-gray-700 mb-6">
@@ -474,7 +474,7 @@ export default function EasySetupGuide() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-10 md:py-14 px-4 bg-gray-50\">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-dark">
             🛠️ HP Printer Setup, Offline & Troubleshooting – FAQ
