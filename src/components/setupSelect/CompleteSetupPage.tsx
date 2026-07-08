@@ -21,16 +21,19 @@ export default function CompleteSetupPage() {
   return (
     <div className="w-full min-h-screen bg-white flex flex-col">
       <SetupHeader showLogo={settings.showLogo} showHeader={settings.showHeader} />
-      <section
-        className="w-full min-h-[560px] flex items-start justify-center relative overflow-hidden px-[6%]"
-        style={{
-          height: '560px',
-          backgroundImage: 'url(/hero_background_image.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="w-full max-w-[1200px] flex flex-col md:flex-row items-start justify-between relative h-full">
+      <section className="relative overflow-hidden w-full min-h-[560px] flex items-start justify-center px-[6%]" style={{ height: '560px' }}>
+        <div className="absolute inset-0">
+          <img
+            src="/hero-easy.png"
+            alt="Background"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+                {/* <div className="absolute opacity-40 inset-0 bg-[#024AD8] mix-blend-multiply"></div> */}
+
+        <div />
+
+        <div className="w-full max-w-[1200px] flex flex-col md:flex-row items-start justify-between relative z-10 h-full">
           <div className="flex flex-col justify-center h-full w-full max-w-[700px] pt-8">
             <h1 className="text-white text-3xl md:text-[2.6rem] font-bold mb-8 leading-tight drop-shadow-lg">Complete setup using HP Smart App</h1>
             <p className="text-white text-lg md:text-xl mb-6 font-normal drop-shadow whitespace-normal">

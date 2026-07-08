@@ -14,7 +14,7 @@ const SetupHeader = ({ showLogo = true, showHeader = true }: { showLogo?: boolea
           {showLogo && (
             <Link href="/search-model" className="inline-flex items-center">
               <img
-                src="/hp.png"
+                src="/HP_logo_2025.svg"
                 alt="HP Logo"
                 className="h-14 w-auto mr-4 hover:opacity-80 transition"
                 width={56}

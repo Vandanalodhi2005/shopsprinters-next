@@ -19,9 +19,9 @@ export default function InstallationFailedPage() {
       <SetupHeader showLogo={settings.showLogo} showHeader={settings.showHeader} />
       <div
         className="flex-1 flex items-center justify-center bg-cover bg-center px-4 py-12 relative"
-        style={{ backgroundImage: "url('/hero_background_image.webp')" }}
+        style={{ backgroundImage: "url('/hero-easy.png')" }}
       >
-        <div className="absolute inset-0 bg-[rgb(2_74_216_/_0.75)] mix-blend-multiply"></div>
+        <div className="absolute opacity-40 inset-0 bg-[#024AD8] mix-blend-multiply"></div>
 
         <div className="w-full max-w-3xl rounded-3xl bg-white p-8 md:p-10 shadow-2xl relative z-10">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-red-500 via-pink-500 to-yellow-400 shadow-lg">
@@ -39,7 +39,7 @@ export default function InstallationFailedPage() {
           <div className="flex justify-center mb-6">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-full bg-[rgb(2_74_216_/_0.75)] px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-[rgb(2_74_216_/_0.95)]"
+              className="inline-flex items-center justify-center rounded-full bg-[#024AD8] px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-[#024AD8]/95"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).jivo_api?.open) {
                   (window as any).jivo_api.open();
